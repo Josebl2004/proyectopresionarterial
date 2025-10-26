@@ -1,0 +1,256 @@
+{
+  "name": "My workflow 3",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "c9027da4-e18b-4491-b212-d06d49a10577",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ac91183f-9fb4-4cc0-8fcf-bada1b27f142",
+      "name": "Webhook",
+      "webhookId": "c9027da4-e18b-4491-b212-d06d49a10577"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "69f53d93-3a9d-4a44-b3b1-0dba14399009",
+              "leftValue": "={{ $json.body.systolic }}",
+              "rightValue": 130,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            },
+            {
+              "id": "9255e90a-bfcb-429b-b92d-8b94a09b19cc",
+              "leftValue": "={{ $json.body.diastolic }}",
+              "rightValue": 80,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        64
+      ],
+      "id": "2af2c10e-5167-471a-af8f-b7c90ef22067",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "chatId": "5381088412",
+        "text": "=⚠️ ALERTA DE EMERGENCIA ⚠️  \nPaciente: {{ $json.body.userName }} \nPresión: {{ $json.body.systolic }} / {{ $json.body.diastolic }} mmHg \nPulso: {{ $json.body.heartRate }} bpm Fecha: {{ $json.body.date }}  \nRecomendación:  {{ $json.body.recommendation }} \n\n¡Verifique al paciente de inmediato!",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        592,
+        -112
+      ],
+      "id": "017cda41-65d7-4591-936b-94506a95a9d2",
+      "name": "Send a text message",
+      "webhookId": "8f55fc77-bed0-4b13-8bcd-a31ba228c798",
+      "credentials": {
+        "telegramApi": {
+          "id": "l83m9seFcOFrkLVO",
+          "name": "Telegram account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Xh-gMas7mIz9lIZFwOfNiMMCsIFr7X8QAmEjxIBBoOw",
+          "mode": "list",
+          "cachedResultName": "presion-alerta",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Xh-gMas7mIz9lIZFwOfNiMMCsIFr7X8QAmEjxIBBoOw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1059087082,
+          "mode": "list",
+          "cachedResultName": "Hoja 2",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Xh-gMas7mIz9lIZFwOfNiMMCsIFr7X8QAmEjxIBBoOw/edit#gid=1059087082"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "nombre": "={{ $json.body.userName }}",
+            "sistolica": "={{ $json.body.systolic }}",
+            "diastolica": "={{ $json.body.diastolic }}",
+            "pulso": "={{ $json.body.heartRate }}",
+            "fecha": "={{ $json.body.date }}",
+            "estado": "={{ $json.body.classification }}",
+            "recomendacion": "={{ $json.body.recommendation }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "nombre",
+              "displayName": "nombre",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "sistolica",
+              "displayName": "sistolica",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "diastolica",
+              "displayName": "diastolica",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "pulso",
+              "displayName": "pulso",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "estado",
+              "displayName": "estado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "recomendacion",
+              "displayName": "recomendacion",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        800,
+        32
+      ],
+      "id": "53224f41-c2cc-4ccc-8e39-5730c2d8c89d",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "I013jzCPI9AbFQXy",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a text message": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b7dcc1e5-7ca2-423c-b9ed-46966a4c6d3d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d1ea8a863f2e546ebd87d5358ab769d1cb392972a6dcdff9f062ac472b021560"
+  },
+  "id": "gMAoCalMF5nB8k36",
+  "tags": []
+}
