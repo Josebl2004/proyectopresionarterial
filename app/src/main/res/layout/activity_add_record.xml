@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddRecordActivity"
+    android:padding="@dimen/space_lg">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/primaryColor"
+        android:background="@color/primaryColor"
+        app:title="Nueva medición"
+        app:titleTextColor="@color/onPrimary"
+        app:titleCentered="true"
+        app:navigationIconTint="@color/onPrimary"/>
+
+    <!-- Banner visual de salud cardiovascular en Nueva Medición -->
+    <ImageView
+        android:id="@+id/ivAddBanner"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/banner_health_desc"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_md"
+        android:src="@drawable/ic_health_illustration" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilSystolic"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp"
+        app:hintEnabled="true"
+        app:hintTextColor="@color/black"
+        android:hint="@string/label_systolic"
+        app:layout_constraintTop_toBottomOf="@id/ivAddBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etSystolic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDiastolic"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_diastolic"
+        app:layout_constraintTop_toBottomOf="@id/tilSystolic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_md">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDiastolic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilHeartRate"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_heart_rate"
+        app:layout_constraintTop_toBottomOf="@id/tilDiastolic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_md">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHeartRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvConditionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_condition"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tilHeartRate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/space_lg"/>
+
+    <RadioGroup
+        android:id="@+id/rgCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvConditionLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_sm"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/rbReposo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_reposo"
+            android:gravity="center_vertical"/>
+
+        <RadioButton
+            android:id="@+id/rbEjercicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_ejercicio"
+            android:gravity="center_vertical"/>
+
+        <RadioButton
+            android:id="@+id/rbEstres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_estres"
+            android:gravity="center_vertical"/>
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save"
+        app:layout_constraintTop_toBottomOf="@id/rgCondition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/space_xl"
+        app:backgroundTint="@color/secondaryColor"
+        app:icon="@android:drawable/ic_menu_save"
+        app:iconTint="@color/onSecondary"
+        app:iconPadding="8dp"
+        android:gravity="center"/>
+
+    <!-- Reemplazo de ProgressBar legacy por Indicador circular Material 3 -->
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progressSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:indicatorSize="32dp"
+        app:trackThickness="4dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/space_md"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardToday"
+    style="@style/Widget.Material3.CardView.Elevated"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/corner_md"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_lg">
+
+        <TextView
+            android:id="@+id/tvLastTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/last_measure"
+            android:textStyle="bold"
+            style="@style/App.Text.Body"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnStatusChip"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStatusChip"
+            style="@style/App.Chip.Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="@string/chip_normal"
+            app:layout_constraintBottom_toBottomOf="@id/tvLastTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvLastTitle"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvStatusToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            style="@style/App.Text.TitleMedium"
+            tools:text="Normal"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastTitle"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvValuesToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="120/80 mmHg • 72 bpm"
+            style="@style/App.Text.Body"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatusToday"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvLastPulse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/App.Text.BodySecondary"
+            android:layout_marginTop="@dimen/space_xs"
+            android:visibility="gone"
+            tools:text="72 lpm"
+            app:layout_constraintTop_toBottomOf="@id/tvValuesToday"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvMetaToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="01/12/2024 - 10:30 • reposo"
+            style="@style/App.Text.BodySecondary"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastPulse"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- Botón Ver más -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewMore"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_view_more_week"
+            android:layout_marginTop="16dp"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@+id/tvMetaToday"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

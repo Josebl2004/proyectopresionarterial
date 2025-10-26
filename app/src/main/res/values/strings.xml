@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VitalPress</string>
+    <string-array name="gender_options">
+        <item>masculino</item>
+        <item>femenino</item>
+        <item>otro</item>
+    </string-array>
+    <string name="profile_hint">Complete su perfil para recomendaciones personalizadas</string>
+    <string name="menu_edit_profile">Editar perfil</string>
+    <string name="btn_edit_profile">Editar perfil</string>
+    <string name="btn_new_measure">Nueva medición</string>
+    <string name="menu_logout">Cerrar sesión</string>
+    <string name="login_title">Inicio de sesión</string>
+    <string name="last_measure">Última Medición</string>
+
+    <!-- Stats -->
+    <string name="menu_stats_title">Estadísticas</string>
+    <string name="stats_averages">Promedios</string>
+    <string name="stats_pressure_label">Presión (mmHg)</string>
+    <string name="stats_pulse_label">Pulso (lpm)</string>
+    <string name="stats_distribution_title">Distribución por Categoría</string>
+    <string name="category_normal">Normal</string>
+    <string name="category_elevada">Elevada</string>
+    <string name="category_hipertension1">Hipertensión Estadio 1</string>
+    <string name="category_hipertension">Hipertensión</string>
+    <string name="category_hipertension2">Hipertensión Estadio 2</string>
+    <string name="stats_trend_title">Tendencia de Presión</string>
+    <string name="stats_indicators_title">Indicadores de Salud</string>
+    <!-- Indicadores: umbrales -->
+    <string name="indicator_normal_threshold">&lt;130/80</string>
+    <string name="indicator_elevada_threshold">130–139/80–89</string>
+    <string name="indicator_hipertension_threshold">&gt;140/90</string>
+
+    <!-- Otros títulos -->
+    <string name="menu_history_title">Historial</string>
+    <string name="title_new_measure">Nueva medición</string>
+    <string name="title_edit_measure">Editar medición</string>
+
+    <!-- Nueva Medición labels -->
+    <string name="label_systolic">Sistólica (mmHg)</string>
+    <string name="label_diastolic">Diastólica (mmHg)</string>
+    <string name="label_heart_rate">Frecuencia cardíaca (bpm)</string>
+    <string name="label_condition">Condición</string>
+    <string name="label_reposo">Reposo</string>
+    <string name="label_ejercicio">Ejercicio</string>
+    <string name="label_estres">Estrés</string>
+    <string name="label_guardar">Guardar</string>
+
+    <!-- Detalles del registro -->
+    <string name="record_details_title">Detalles de la medición</string>
+    <string name="systolic">Sistólica</string>
+    <string name="diastolic">Diastólica</string>
+    <string name="heart_rate">Pulso</string>
+    <string name="info_title">Información</string>
+    <string name="time_label">Hora:</string>
+    <string name="condition_label">Condición:</string>
+    <string name="classification_label">Clasificación:</string>
+    <string name="share">Compartir</string>
+    <string name="edit">Editar</string>
+    <string name="delete">Eliminar</string>
+    <string name="btn_close">Cerrar</string>
+
+    <!-- Nueva sección añadida -->
+    <string name="tips_title">Buenas prácticas antes de medir</string>
+    <string name="tips_list">• Siéntate y descansa 5 minutos.
+• Mantén la espalda recta y apoyada.
+• Apoya el brazo a la altura del corazón.
+• Evita cafeína/ejercicio 30 min antes.
+• No hables durante la medición.</string>
+
+    <string name="api_recommendations_title">Recomendaciones personalizadas</string>
+    <string name="api_recommendations_loading">Cargando recomendaciones…</string>
+    <string name="api_recommendations_empty">Registra una medición para obtener recomendaciones.</string>
+    <string name="api_recommendations_error">No fue posible obtener recomendaciones en este momento.</string>
+    <string name="api_recommendations_error_detail">No se pudieron obtener recomendaciones. Verifique su conexión a internet y los permisos de la aplicación.</string>
+    <string name="btn_more_tips">Ver más consejos</string>
+    <string name="btn_more_recommendations">Más recomendaciones</string>
+    <string name="recommendations_title">Recomendaciones IA</string>
+    <string name="assistant_title">Asistente de Salud</string>
+    <string name="assistant_subtitle">Análisis personalizado</string>
+    <string name="quick_tips_title">Consejos Rápidos</string>
+    <string name="emergency_title">Atención M��dica Urgente</string>
+    <string name="emergency_body">Si tu presión arterial es superior a 180/120 mmHg, o si experimentas síntomas como dolor de cabeza severo, dificultad para respirar o dolor en el pecho, busca atención médica inmediata.</string>
+    <string name="welcome_text">Bienvenido, %1$s</string>
+    <string name="empty_today">Aún no ha registrado su presión hoy</string>
+    <string name="values_today">%1$d/%2$d mmHg • %3$d bpm</string>
+    <string name="meta_today">%1$s - %2$s • %3$s</string>
+    <string name="chip_hipertension">Hipertensión</string>
+    <string name="chip_elevada">Elevada</string>
+    <string name="chip_normal">Normal</string>
+
+    <!-- Content Descriptions -->
+    <string name="banner_health_desc">Banner visual de salud cardiovascular</string>
+    <string name="avatar_desc">Avatar de usuario</string>
+    <string name="logout_desc">Cerrar sesión</string>
+    <string name="history_desc">Icono de historial</string>
+    <string name="stats_desc">Icono de estadísticas</string>
+
+    <!-- Valores de ejemplo para detalles del registro -->
+    <string name="example_systolic">120</string>
+    <string name="example_diastolic">80</string>
+    <string name="example_heart_rate">75 bpm</string>
+    <string name="example_time">10:30 AM</string>
+    <string name="example_condition">Normal</string>
+    <string name="example_classification">Óptima</string>
+
+    <!-- AddRecordActivity and EditProfileActivity strings -->
+    <string name="btn_save">Guardar</string>
+
+    <!-- Edit Profile strings -->
+    <string name="hint_weight_lbs">Peso (lbs)</string>
+    <string name="hint_height_cm">Altura (cm)</string>
+    <string name="hint_dob">Fecha de nacimiento</string>
+
+    <!-- Nuevas funcionalidades mejoradas -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_records">Registros</string>
+    <string name="menu_analysis">Análisis</string>
+    <string name="menu_settings">Ajustes</string>
+
+    <string name="quick_actions_title">Acciones rápidas</string>
+    <string name="btn_export_data">Exportar datos</string>
+    <string name="btn_compare_records">Comparar mediciones</string>
+    <string name="btn_set_reminder">Configurar recordatorio</string>
+    <string name="btn_emergency_contacts">Contactos de emergencia</string>
+    <string name="btn_medications">Mis medicamentos</string>
+    <string name="btn_goals">Metas de salud</string>
+
+    <string name="trend_chart_title">Tendencia últimos 7 días</string>
+    <string name="weekly_summary_title">Resumen semanal</string>
+    <string name="measurements_count">Mediciones realizadas: %1$d</string>
+    <string name="avg_systolic">Sistólica promedio: %1$d mmHg</string>
+    <string name="avg_diastolic">Diastólica promedio: %1$d mmHg</string>
+    <string name="avg_heart_rate">Frecuencia cardíaca promedio: %1$d bpm</string>
+
+    <string name="export_success">Datos exportados exitosamente</string>
+    <string name="export_failed">Error al exportar datos</string>
+    <string name="export_dialog_title">Exportar datos</string>
+    <string name="export_dialog_message">¿En qué formato desea exportar?</string>
+    <string name="export_csv">CSV (Excel)</string>
+    <string name="export_pdf">PDF</string>
+    <string name="export_json">JSON</string>
+
+    <string name="reminder_set">Recordatorio configurado</string>
+    <string name="reminder_dialog_title">Recordatorio de medición</string>
+    <string name="reminder_dialog_message">¿A qué hora desea recibir el recordatorio diario?</string>
+
+    <string name="compare_title">Comparar mediciones</string>
+    <string name="compare_subtitle">Seleccione dos fechas para comparar</string>
+    <string name="compare_date_1">Primera fecha</string>
+    <string name="compare_date_2">Segunda fecha</string>
+    <string name="btn_compare">Comparar</string>
+
+    <string name="medications_title">Mis medicamentos</string>
+    <string name="add_medication">Agregar medicamento</string>
+    <string name="medication_name">Nombre del medicamento</string>
+    <string name="medication_dosage">Dosis</string>
+    <string name="medication_frequency">Frecuencia</string>
+
+    <string name="goals_title">Metas de salud</string>
+    <string name="goal_systolic">Meta sistólica</string>
+    <string name="goal_diastolic">Meta diastólica</string>
+    <string name="goal_save">Guardar meta</string>
+
+    <string name="settings_title">Configuración</string>
+    <string name="settings_notifications">Notificaciones</string>
+    <string name="settings_units">Unidades de medida</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_backup">Respaldo de datos</string>
+
+    <string name="health_insights_title">Perspectivas de salud</string>
+    <string name="insights_loading">Analizando datos...</string>
+    <string name="insights_error">No hay suficientes datos para análisis</string>
+
+    <string name="weekly_average">Promedio semanal: %1$d/%2$d mmHg, %3$d lpm</string>
+    <string name="bmi_age">IMC: %.1f (%s) · Edad: %d</string>
+
+    <string name="share_record_template">Mi presión arterial: %1$d/%2$d mmHg, FC: %3$d bpm\nFecha: %4$s %5$s\nClasificación: %6$s</string>
+    <string name="share_via">Compartir vía</string>
+
+    <string name="delete_record_title">Eliminar registro</string>
+    <string name="delete_record_confirmation">¿Está seguro de eliminar este registro?</string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="btn_cancel">Cancelar</string>
+
+    <string name="logout_title">Cerrar sesión</string>
+    <string name="logout_confirmation">¿Desea cerrar sesión?</string>
+    <string name="btn_logout">Cerrar sesión</string>
+
+    <!-- Login strings -->
+    <string name="hint_user_email">Email o nombre de usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="action_login">Iniciar sesión</string>
+    <string name="login_error">Usuario o contraseña incorrectos</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="forgot_password">¿Olvidó su contraseña?</string>
+
+    <!-- Strings para StatsActivity -->
+    <string name="no_data_available">No hay suficientes datos para mostrar estadísticas</string>
+    <string name="period_week">Semana</string>
+    <string name="period_month">Mes</string>
+    <string name="period_year">Año</string>
+    <string name="period_all">Todo</string>
+
+    <!-- Strings para recommendations -->
+    <string name="label_retry">Reintentar</string>
+    <string name="btn_call">Llamar a emergencias</string>
+    <string name="quick_tip_reduce_salt">Reduzca el consumo de sal a menos de 5g al día</string>
+    <string name="quick_tip_activity">Intente realizar 30 minutos de actividad física al día</string>
+    <string name="quick_tip_caffeine">Limite el consumo de cafeína a menos de 200mg diarios</string>
+
+    <!-- Strings para fragments -->
+    <string name="empty_no_records">No hay registros disponibles</string>
+    <string name="empty_summary">No hay suficientes datos para mostrar un resumen</string>
+
+    <!-- Strings para menus -->
+    <string name="filter">Filtrar</string>
+    <string name="export">Exportar</string>
+    <string name="save_as_pdf">Guardar como PDF</string>
+    <string name="refresh">Actualizar</string>
+    <string name="help">Ayuda</string>
+
+    <!-- Strings para filtros de HistoryActivity -->
+    <string name="filter_title">Filtrar registros</string>
+    <string name="filter_normal">Normal</string>
+    <string name="filter_elevated">Elevada</string>
+    <string name="filter_hypertension">Hipertensión</string>
+    <string name="filter_date_asc">Fecha (ascendente)</string>
+    <string name="filter_date_desc">Fecha (descendente)</string>
+    <string name="filter_value_asc">Valor (ascendente)</string>
+    <string name="filter_value_desc">Valor (descendente)</string>
+    <string name="btn_apply">Aplicar</string>
+    <string name="btn_reset">Reiniciar</string>
+    <string name="export_title">Exportar datos</string>
+    <string name="export_share">Compartir datos</string>
+
+    <!-- Cadenas faltantes identificadas -->
+    <string name="classification_distribution">Distribución por clasificación</string>
+    <string name="average_title_format">Promedios - %s</string>
+    <string name="trend_improving">Mejorando</string>
+    <string name="trend_worsening">Empeorando</string>
+    <string name="trend_stable">Estable</string>
+
+    <!-- Mensajes de error -->
+    <string name="error_weight_range">El peso debe estar entre 45 y 660 libras</string>
+    <string name="error_height_range">La altura debe estar entre 100 y 250 cm</string>
+    <string name="error_dob_required">La fecha de nacimiento es obligatoria</string>
+    <string name="error_no_network">No hay conexión a internet. Compruebe su conexión y vuelva a intentarlo.</string>
+    <string name="error_api_key_missing">Falta la clave de API. Contacte al administrador del sistema.</string>
+    <string name="error_api_config">Error en la configuración de la API. Contacte al soporte técnico.</string>
+    <string name="error_nothing_to_share">No hay información disponible para compartir.</string>
+    <string name="navigation_activity_missing">No se puede navegar a esa función. Actualice la aplicación.</string>
+
+    <!-- Compartir información -->
+    <string name="share_template">Mi presión arterial: %1$s mmHg - %2$d bpm - %3$s</string>
+    <string name="share_stats_title">Mis estadísticas de presión arterial</string>
+    <string name="share_stats_image">Imagen de estadísticas de presión arterial</string>
+    <string name="share_stats_text">Compartir como texto</string>
+    <string name="share_stats_pdf">Compartir como PDF</string>
+
+    <!-- Alertas y ayuda -->
+    <string name="emergency_call_confirmation">¿Desea llamar a servicios de emergencia?</string>
+    <string name="feature_coming_soon">Esta característica estará disponible próximamente</string>
+    <string name="stats_help_title">Entendiendo tus estadísticas</string>
+    <string name="stats_help_message">Las estadísticas muestran el promedio de tus mediciones y la distribución por categorías de presión arterial. Un seguimiento constante te ayuda a monitorear tu salud cardiovascular.</string>
+
+    <!-- Mensajes para AddRecordActivity -->
+    <string name="exit_title">Salir</string>
+    <string name="exit_confirmation">¿Estás seguro que deseas salir? Los cambios no guardados se perderán.</string>
+    <string name="btn_exit">Salir</string>
+    <string name="error_empty_fields">Este campo es obligatorio</string>
+    <string name="error_invalid_datetime">La fecha y hora no son válidas</string>
+    <string name="error_invalid_values">El valor ingresado está fuera del rango permitido</string>
+    <string name="delete_title">Eliminar registro</string>
+    <string name="delete_confirmation">¿Estás seguro que deseas eliminar este registro? Esta acción no se puede deshacer.</string>
+    <string name="record_updated">Registro actualizado exitosamente</string>
+    <string name="record_saved">Registro guardado exitosamente</string>
+    <string name="record_deleted">Registro eliminado exitosamente</string>
+    <string name="btn_view_more_week">Ver más en Tendencia últimos 7 días</string>
+
+    <!-- URL del webhook n8n para envío de eventos (crear/actualizar/eliminar) -->
+    <string name="n8n_webhook_url">CHANGE_ME_N8N_WEBHOOK_URL</string>
+</resources>

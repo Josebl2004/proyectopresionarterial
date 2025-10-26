@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Fondo circular azul -->
+    <path android:pathData="M60,10a50,50 0 1,0 0.1,0" android:fillColor="#2962FF"/>
+    <!-- Corazón verde -->
+    <path android:pathData="M60,40c-10,-10 -25,0 -25,15c0,15 25,35 25,35s25,-20 25,-35c0,-15 -15,-25 -25,-15z" android:fillColor="#00C853"/>
+    <!-- Cruz médica blanca -->
+    <path android:pathData="M60,55h-8v8h-8v8h8v8h8v-8h8v-8h-8z" android:fillColor="#FFFFFF"/>
+    <!-- Detalle amarillo (círculo) -->
+    <path android:pathData="M90,30 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" android:fillColor="#FFAB00"/>
+</vector>

@@ -1,0 +1,26 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Proyectopresionarterial" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores principales actualizados -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
+
+        <item name="colorSuccess">@color/successColor</item>
+        <item name="colorOnSuccess">@color/onSuccess</item>
+        <item name="colorWarning">@color/warningColor</item>
+        <item name="colorOnWarning">@color/onWarning</item>
+        <item name="colorError">@color/errorColor</item>
+        <item name="colorOnError">@color/onError</item>
+
+        <item name="colorSurface">@color/surfaceColor</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <item name="colorBackground">@color/backgroundColor</item>
+        <item name="colorOnBackground">@color/onBackground</item>
+    </style>
+
+    <style name="Theme.Proyectopresionarterial" parent="Base.Theme.Proyectopresionarterial" />
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_sm"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="12dp"
+    app:strokeWidth="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_lg">
+
+        <TextView
+            android:id="@+id/tvClassification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/App.Text.TitleMedium"
+            tools:text="Normal"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chipStatus"
+            style="@style/App.Chip.Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:text="@string/category_normal"
+            android:clickable="false"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/tvValues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/App.Text.Body"
+            android:layout_marginTop="@dimen/space_sm"
+            tools:text="120/80 mmHg • 72 bpm"/>
+
+        <TextView
+            android:id="@+id/tvMeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/App.Text.BodySecondary"
+            android:layout_marginTop="@dimen/space_xs"
+            tools:text="12/04 08:30 • reposo"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Paleta profesional y accesible -->
+    <color name="primaryColor">#C62828</color> <!-- Rojo cálido principal -->
+    <color name="primaryDark">#B71C1C</color> <!-- Variante oscura -->
+    <color name="onPrimary">#FFFFFF</color>
+
+    <color name="secondaryColor">#1976D2</color> <!-- Azul secundario profesional -->
+    <color name="onSecondary">#FFFFFF</color>
+
+    <color name="successColor">#388E3C</color> <!-- Verde éxito -->
+    <color name="onSuccess">#FFFFFF</color>
+    <color name="warningColor">#FFA000</color> <!-- Ámbar advertencia -->
+    <color name="onWarning">#212121</color>
+    <color name="errorColor">#D32F2F</color> <!-- Rojo error -->
+    <color name="onError">#FFFFFF</color>
+
+    <color name="backgroundColor">#FAFAFA</color>
+    <color name="surfaceColor">#FFFFFF</color>
+    <color name="onBackground">#212121</color>
+    <color name="onSurface">#212121</color>
+    <color name="textSecondary">#757575</color>
+
+    <!-- Estados presión arterial -->
+    <color name="bp_green">#388E3C</color>   <!-- normal / saludable -->
+    <color name="bp_yellow">#FFA000</color>  <!-- elevada / advertencia -->
+    <color name="bp_orange">#FF6F00</color>  <!-- hipertensión estadio 1 -->
+    <color name="bp_red">#C62828</color>     <!-- alto riesgo / hipertensión -->
+
+    <!-- Colores para gráficos de estadísticas -->
+    <color name="systolic_color">#E53935</color> <!-- Rojo para sistólica -->
+    <color name="systolic_color_transparent">#4DE53935</color> <!-- Rojo transparente -->
+    <color name="diastolic_color">#1E88E5</color> <!-- Azul para diastólica -->
+    <color name="diastolic_color_transparent">#4D1E88E5</color> <!-- Azul transparente -->
+    <color name="heart_rate_color">#43A047</color> <!-- Verde para frecuencia cardíaca -->
+</resources>
